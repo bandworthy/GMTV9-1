@@ -1,0 +1,168 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/*List  Div Table Centering 
+    780 is currently greater than the width however FireFox is broken
+    if less
+*/
+div.list-div, div.list-heading {
+    max-width: 780px;
+    /*max-width: 1020px;*/
+    margin: 0px auto;
+    padding: 0px 16px;
+}
+
+/* Section for links and Buttons*/
+a.list-button:link {
+    color: white;
+    text-decoration: none;
+}
+
+a.list-button:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a.list-button:hover {
+    color: white;
+    text-decoration: none;
+}
+
+div.button-list {
+    border-top: 1px solid white !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+/*End Button and links Section*/
+/*General div table styling*/
+div.list-data {
+    float: left;
+    display: table;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    border-top: 1px solid #ddd;
+    margin: 0 auto 20px;
+}
+
+/*Heading Div table styles*/
+div.position-table-heading-left, div.position-table-heading-middle, div.position-table-heading-middle-small {
+    border-top: 1px solid #000000;
+    /*max-width: 120px;
+    min-width: 120px;*/
+    font-weight: bold;
+}
+
+/*div.position-table-heading-middle {
+    border-top: 1px solid #000000;
+    font-weight: bold;
+}
+
+div.position-table-heading-middle-small {
+    border-top: 1px solid #000000;
+    font-weight: bold;
+}*/
+
+/*Div table cell styling*/
+div.position-table-left, div.position-table-heading-left {
+    /*float: left;*/
+    clear: both;
+    /*display: table;*/
+    max-width: 120px;
+    min-width: 120px;
+    /*margin: 0 auto 20px;*/
+    /*padding-right: 10px;*/
+    /*padding-left: 10px;*/
+    /*padding-top: 5px;*/
+    /*border-top: 1px solid #ddd;*/
+}
+
+div.position-table-middle, div.position-table-heading-middle {
+    /*float: left;*/
+    /*padding-right: 10px;*/
+    /*display: table;*/
+    max-width: 130px;
+    min-width: 130px;
+    /*margin: 0 auto 20px;*/
+    /*padding-left: 10px;*/
+    /*padding-top: 5px;*/
+    /*border-top: 1px solid #ddd;*/
+}
+
+div.position-table-middle-small, div.position-table-heading-middle-small {
+    /*float: left;*/
+    /*padding-right: 10px;*/
+    /*display: table;*/
+    max-width: 80px;
+    min-width: 80px;
+    /*margin: 0 auto 20px;*/
+    /*padding-left: 10px;*/
+    /*padding-top: 5px;*/
+    /*border-top: 1px solid #ddd;*/
+}
+
+/*div.middle {
+    float: left;
+    padding-right: 5px;
+}*/
+/*End*/
+
+/*Image Banner CSS*/
+.image-area {
+    background-color: black;
+    background-image: url('images/Fallout-Banner.jpg');
+    background-position: center center;
+    background-size: cover;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.centered-container {
+    max-width: 300px;
+    margin: 0px auto;
+    padding: 0px 16px;
+}
+
+.image-text {
+    font-size: 3.0rem;
+    text-align: center;
+    background-color: black;
+    color: white;
+    opacity: 0.5;
+}
+/*End banner CSS*/
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}

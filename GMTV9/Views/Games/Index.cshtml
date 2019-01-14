@@ -1,0 +1,142 @@
+﻿@model IEnumerable<GMTV9.Models.Game>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<h2>Index</h2>*@
+<div class="image-area">
+    <div class="image-text centered-container">Game Listing</div>
+</div>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+    <button type="button" class="btn btn-default "> @Html.ActionLink("New Game", "Create")</button>
+</p>
+
+<div class="list-heading"></div>
+<div class="list-div"></div>
+<script type="text/javascript" src="~/js/GamesAjaxController.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var header = $('body');
+
+        var backgrounds = new Array(
+            'url(/images/Fallout-Banner.jpg)'
+            , 'url(/images/Banner-Before.jpg)'
+            , 'url(/images/Banner-DogMeat.jpg)'
+            , 'url(/images/Doom.jpg)'
+            , 'url(/images/Overcooked2.jpg)'
+        );
+
+        var current = 0;
+
+        function nextBackground() {
+            current++;
+            current = current % backgrounds.length;
+            $('div.image-area').css('background-image', backgrounds[current]);
+        }
+        setInterval(nextBackground, 8000);
+        $('div.image-area').css('background-image', backgrounds[0]);
+
+        GamesAjaxController.GetAllGamesData();
+
+        var car = {
+            carIdtype: 1,
+            details: [
+                { type: 'Fiat', model: 500, color: 'white' }
+            ]
+        };
+
+        $('.TestButtonClass').click(function () {
+            GamesAjaxController.SetTest(car);
+        });
+
+    });
+</script>
+
+@*<table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Subtitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsSeries)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SeriesNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Platform)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Year)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BarCodeNum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HasPlatinum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HasTrophies)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Platinumed)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AllDone)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Subtitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsSeries)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SeriesNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Platform)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BarCodeNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HasPlatinum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HasTrophies)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Platinumed)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AllDone)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@

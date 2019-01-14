@@ -1,0 +1,84 @@
+﻿@model GMTV9.Models.Game
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Game</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Subtitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Subtitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsSeries)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsSeries)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SeriesNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SeriesNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Platform)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Platform)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BarCodeNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BarCodeNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HasPlatinum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HasPlatinum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HasTrophies)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HasTrophies)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Platinumed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Platinumed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AllDone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AllDone)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
