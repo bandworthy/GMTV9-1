@@ -9,7 +9,7 @@ GamesAjaxController.GetGamesTestData = function (getgamelist) {
     return $.ajax({
         type: "POST",
         url: '@Url.Action("GetGameList", "GamesAjaxController")',
-        contentType: "application/json; charset=utf-8",
+        contentType: "application/json; charset=utf-8", 
         dataType: "json",
 
     });
